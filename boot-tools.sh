@@ -7,7 +7,7 @@ clear
 # Checks to verify that the script is running as root
 if [[ $EUID -ne 0 ]]; then
    echo "THIS SCRIPT NEEDS TO BE RUN AS ROOT."
-   echo "EX: sudo ./linux-tools.sh"
+   echo "EX: sudo ./boot-tools.sh"
    exit 1
 fi
 
