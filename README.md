@@ -1,5 +1,5 @@
 # Quick tools to install upon first installation
-This script is a quick wget to install and configure desired tools on RASBIAN, UBUNTU, KALI.
+This script is a quick wget to install and configure desired tools on RASBIAN, UBUNTU or KALI.
 
 First, copy or wget the script: 
 ```wget https://raw.githubusercontent.com/BwithE/boot-tools/main/boot-tools.sh```
