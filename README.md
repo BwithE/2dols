@@ -11,4 +11,3 @@ OR, make the script executable:
 ```sudo chmod +x boot-tools.sh``` 
 
 then run: ```sudo ./boot-tools.sh```
-
