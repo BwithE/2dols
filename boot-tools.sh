@@ -57,17 +57,6 @@ if [[ "$(cat /etc/os-release | grep ID=ubuntu)" == 'ID=ubuntu' ]]; then
     echo "INSTALLING ETTERCAP"
     sudo apt install ettercap-text-only -y
     clear
-    echo "INSTALLING BRAVE BROWSER"
-    sudo apt install curl -y
-    sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
-    echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
-    sudo apt update
-    sudo apt install brave-browser -y
-    clear
-    echo "REMOVING FIREFOX"
-    sudo apt remove firefox -y
-    sudo snap remove firefox -y
-    clear
     echo "INSTALLING METASPLOIT"
     sudo apt install gpgv2 autoconf bison build-essential postgresql libaprutil1 libgmp3-dev libpcap-dev openssl libpq-dev libreadline6-dev libsqlite3-dev libssl-dev locate libsvn1 libtool libxml2 libxml2-dev libxslt-dev wget libyaml-dev ncurses-dev  postgresql-contrib xsel zlib1g zlib1g-dev -y
     sudo rm -r msfinstall
