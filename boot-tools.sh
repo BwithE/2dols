@@ -161,16 +161,6 @@ elif [[ "$(cat /etc/os-release | grep ID=kali)" == 'ID=kali' ]]; then
     echo "INSTALLING TERMINATOR"
     sudo apt install terminator -y
     clear
-    echo "INSTALLING BRAVE BROWSER"
-    sudo apt install curl -y
-    sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
-    echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
-    sudo apt update
-    sudo apt install brave-browser -y
-    clear
-    echo "REMOVING FIREFOX"
-    sudo apt remove firefox-esr -y
-    clear
     echo "INSTALLING QRENCODE"
     sudo apt install qrencode -y
     clear
