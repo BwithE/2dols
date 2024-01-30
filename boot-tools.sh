@@ -35,6 +35,7 @@ install_packages() {
     clear
 }
 
+clear
 # update and upgrade
 echo "updating and upgrading..."
 if command -v apt &> /dev/null; then
@@ -102,4 +103,5 @@ else
     exit 1
 fi
 
+clear
 echo "script completed successfully."
