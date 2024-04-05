@@ -1,5 +1,5 @@
 # Quick tools to install upon first installation
-This script is a quick wget to install and configure desired tools on RASBIAN, UBUNTU or KALI.
+This script is a quick wget to install and configure desired tools on RASBIAN, UBUNTU, KALI or CENTOS.
 
 First, copy or wget the script: 
 
