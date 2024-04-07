@@ -1,20 +1,10 @@
 #!/bin/bash
 # Make sure you are root before you run this script (sudo ./script.sh)
 # This script is designed to update your machine and install updates/upgrades and software of users choice
-# This also changes the CASE-SENSITIVE in UBUNTU and Raspbian
+# This also changes the CASE-SENSITIVE in UBUNTU, Raspbian and CentOS
 
 clear
-echo "
-▀█████████▄   ▄██████▄   ▄██████▄      ███         ███      ▄██████▄   ▄██████▄   ▄█          ▄████████ 
-  ███    ███ ███    ███ ███    ███ ▀█████████▄ ▀█████████▄ ███    ███ ███    ███ ███         ███    ███ 
-  ███    ███ ███    ███ ███    ███    ▀███▀▀██    ▀███▀▀██ ███    ███ ███    ███ ███         ███    █▀  
- ▄███▄▄▄██▀  ███    ███ ███    ███     ███   ▀     ███   ▀ ███    ███ ███    ███ ███         ███        
-▀▀███▀▀▀██▄  ███    ███ ███    ███     ███         ███     ███    ███ ███    ███ ███       ▀███████████ 
-  ███    ██▄ ███    ███ ███    ███     ███         ███     ███    ███ ███    ███ ███                ███ 
-  ███    ███ ███    ███ ███    ███     ███         ███     ███    ███ ███    ███ ███▌    ▄    ▄█    ███ 
-▄█████████▀   ▀██████▀   ▀██████▀     ▄████▀      ▄████▀    ▀██████▀   ▀██████▀  █████▄▄██  ▄████████▀  
-                                                                                 ▀                      
-"
+
 # Checks to verify that the script is running as root
 if [[ $EUID -ne 0 ]]; then
    echo "THIS SCRIPT NEEDS TO BE RUN AS ROOT."
@@ -95,7 +85,9 @@ elif grep -q ID=centos /etc/os-release; then
     install_packages terminator net-tools nmap arp-scan aircrack-ng wireshark tshark tree ettercap gpgv2 autoconf bison make postgresql postgresql-server postgresql-contrib libpcap libpcap-devel openssl openssl-devel readline readline-devel sqlite sqlite-devel libyaml libyaml-devel libxml2 libxml2-devel libxslt libxslt-devel wget ncurses ncurses-devel zlib zlib-devel qrencode vsftpd ftp zbar-tools steghide
 
     # additional centos configs
+    echo 'set completion-ignore-case on' | sudo tee -a /etc/inputrc
     clear
+
 
 # if not
 else
