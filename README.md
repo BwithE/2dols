@@ -3,16 +3,16 @@ This script is a quick wget to install and configure desired tools on RASBIAN, U
 
 First, copy or wget the script: 
 
-```wget https://raw.githubusercontent.com/BwithE/boot-tools/main/boot-tools.sh```
+```wget https://raw.githubusercontent.com/BwithE/boot-tools/main/boottools.sh```
 
 Next, to run the script: 
 
-```sudo bash boot-tools.sh```
+```sudo bash boottools.sh```
 
 OR, make the script executable: 
 
-```sudo chmod +x boot-tools.sh``` 
+```sudo chmod +x boottools.sh``` 
 
 then run: 
 
-```sudo ./boot-tools.sh```
+```sudo ./boottools.sh```
