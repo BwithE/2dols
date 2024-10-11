@@ -1,18 +1,12 @@
 # Quick tools to install upon first installation
 This script is a quick wget to install and configure desired tools on RASBIAN, UBUNTU, KALI or CENTOS.
 
-First, copy or wget the script: 
+Clone this repo: 
 
-```wget https://raw.githubusercontent.com/BwithE/boot-tools/main/boottools.sh```
+```git clone https://github.com/bwithe/boottools```
 
-Next, to run the script: 
+Run the script: 
+`cd boottools`
 
-```sudo bash boottools.sh```
+`sudo bash boottools.sh`
 
-OR, make the script executable: 
-
-```sudo chmod +x boottools.sh``` 
-
-then run: 
-
-```sudo ./boottools.sh```
