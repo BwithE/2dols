@@ -61,8 +61,8 @@ elif uname -a | grep -i centos; then
 
 # if not
 else
-    echo "this is not ubuntu, raspbian, kali, or centos. exiting."
+    echo "Couldn't determine OS. EXITING...."
     exit 1
 fi
 
-echo "script completed successfully."
+echo "Script completed successfully."
