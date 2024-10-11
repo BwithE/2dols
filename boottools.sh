@@ -65,5 +65,4 @@ else
     exit 1
 fi
 
-clear
 echo "script completed successfully."
