@@ -43,7 +43,7 @@ if grep -q ID=ubuntu /etc/os-release; then
     echo "this is ubuntu!"
 
     # install ubuntu packages
-    install_packages terminator net-tools nmap arp-scan aircrack-ng wireshark tshark tree ettercap-text-only gpgv2 autoconf bison build-essential postgresql libaprutil1 libgmp3-dev libpcap-dev openssl libpq-dev libreadline6-dev libsqlite3-dev libssl-dev locate libsvn1 libtool libxml2 libxml2-dev libxslt-dev wget libyaml-dev ncurses-dev postgresql-contrib xsel zlib1g zlib1g-dev qrencode steghide vsftpd ftp zbar-tools
+    sudo apt install -y terminator net-tools nmap arp-scan aircrack-ng wireshark tshark tree ettercap-text-only gpgv2 autoconf bison build-essential postgresql libaprutil1 libgmp3-dev libpcap-dev openssl libpq-dev libreadline6-dev libsqlite3-dev libssl-dev locate libsvn1 libtool libxml2 libxml2-dev libxslt-dev wget libyaml-dev ncurses-dev postgresql-contrib xsel zlib1g zlib1g-dev qrencode steghide vsftpd ftp zbar-tools
 
     # install metasploit
     sudo rm -r msfinstall
@@ -61,7 +61,7 @@ elif grep -q ID=raspbian /etc/os-release; then
     echo "this is raspbian!"
 
     # install raspbian packages
-    install_packages terminator net-tools nmap arp-scan ettercap-text-only aircrack-ng wireshark tshark tree qrencode steghide vsftpd ftp zbar-tools
+    sudo apt install -y terminator net-tools nmap arp-scan ettercap-text-only aircrack-ng wireshark tshark tree qrencode steghide vsftpd ftp zbar-tools
 
     # additional raspbian configs
     echo 'set completion-ignore-case on' | sudo tee -a /etc/inputrc
@@ -72,7 +72,7 @@ elif grep -q ID=kali /etc/os-release; then
     echo "this is kali!"
 
     # install kali packages
-    install_packages terminator qrencode zbar-tools vsftpd ftp steghide
+    sudo apt install -y terminator qrencode zbar-tools vsftpd ftp steghide
 
     # additional kali configs
     clear
@@ -82,7 +82,7 @@ elif grep -q ID=centos /etc/os-release; then
     echo "this is centos!"
 
     # install centos packages
-    install_packages terminator net-tools nmap arp-scan aircrack-ng wireshark tshark tree ettercap gpgv2 autoconf bison make postgresql postgresql-server postgresql-contrib libpcap libpcap-devel openssl openssl-devel readline readline-devel sqlite sqlite-devel libyaml libyaml-devel libxml2 libxml2-devel libxslt libxslt-devel wget ncurses ncurses-devel zlib zlib-devel qrencode vsftpd ftp zbar-tools steghide
+    sudo yum install -y terminator net-tools nmap arp-scan aircrack-ng wireshark tshark tree ettercap gpgv2 autoconf bison make postgresql postgresql-server postgresql-contrib libpcap libpcap-devel openssl openssl-devel readline readline-devel sqlite sqlite-devel libyaml libyaml-devel libxml2 libxml2-devel libxslt libxslt-devel wget ncurses ncurses-devel zlib zlib-devel qrencode vsftpd ftp zbar-tools steghide
 
     # additional centos configs
     echo 'set completion-ignore-case on' | sudo tee -a /etc/inputrc
