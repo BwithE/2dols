@@ -27,9 +27,9 @@ install_packages() {
 
 clear
 # update and upgrade
-echo "updating and upgrading..."
+echo "updating..."
 if command -v apt &> /dev/null; then
-    sudo apt update -y && sudo apt upgrade -y
+    sudo apt update -y 
 elif command -v yum &> /dev/null; then
     sudo yum update -y
 else
