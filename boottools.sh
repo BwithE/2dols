@@ -12,36 +12,12 @@ if [[ $EUID -ne 0 ]]; then
    exit 1
 fi
 
-# function to install packages
-install_packages() {
-    if command -v apt &> /dev/null; then
-        sudo apt install -y "${@}"
-    elif command -v yum &> /dev/null; then
-        sudo yum install -y "${@}"
-    else
-        echo "unsupported package manager. exiting."
-        exit 1
-    fi
-    clear
-}
 
-clear
-# update and upgrade
-echo "updating..."
-if command -v apt &> /dev/null; then
-    sudo apt update -y 
-elif command -v yum &> /dev/null; then
-    sudo yum update -y
-else
-    echo "unsupported package manager. exiting."
-    exit 1
-fi
-clear
 
 # check for ubuntu
-if grep -q ID=ubuntu /etc/os-release; then
+if uname -a | grep -i ubuntu; then
     echo "this is ubuntu!"
-
+    sudo apt update -y
     # install ubuntu packages
     sudo apt install -y terminator net-tools nmap arp-scan aircrack-ng wireshark tshark tree ettercap-text-only gpgv2 autoconf bison build-essential postgresql libaprutil1 libgmp3-dev libpcap-dev openssl libpq-dev libreadline6-dev libsqlite3-dev libssl-dev locate libsvn1 libtool libxml2 libxml2-dev libxslt-dev wget libyaml-dev ncurses-dev postgresql-contrib xsel zlib1g zlib1g-dev qrencode steghide vsftpd ftp zbar-tools
 
@@ -54,39 +30,33 @@ if grep -q ID=ubuntu /etc/os-release; then
 
     # additional ubuntu configs
     echo 'set completion-ignore-case on' | sudo tee -a /etc/inputrc
-    clear
 
 # check for raspbian
-elif grep -q ID=raspbian /etc/os-release; then
+elif uname -a | grep -i rasbi; then
     echo "this is raspbian!"
-
+    sudo apt update -y
     # install raspbian packages
     sudo apt install -y terminator net-tools nmap arp-scan ettercap-text-only aircrack-ng wireshark tshark tree qrencode steghide vsftpd ftp zbar-tools
 
     # additional raspbian configs
     echo 'set completion-ignore-case on' | sudo tee -a /etc/inputrc
-    clear
 
 # check for kali
-elif grep -q ID=kali /etc/os-release; then
+elif uname -a | grep -i kali; then
     echo "this is kali!"
-
+    sudo apt update -y
     # install kali packages
     sudo apt install -y terminator qrencode zbar-tools vsftpd ftp steghide
 
-    # additional kali configs
-    clear
-
 # check for centos
-elif grep -q ID=centos /etc/os-release; then
+elif uname -a | grep -i centos; then
     echo "this is centos!"
-
+    sudo yum update -y
     # install centos packages
     sudo yum install -y terminator net-tools nmap arp-scan aircrack-ng wireshark tshark tree ettercap gpgv2 autoconf bison make postgresql postgresql-server postgresql-contrib libpcap libpcap-devel openssl openssl-devel readline readline-devel sqlite sqlite-devel libyaml libyaml-devel libxml2 libxml2-devel libxslt libxslt-devel wget ncurses ncurses-devel zlib zlib-devel qrencode vsftpd ftp zbar-tools steghide
 
     # additional centos configs
     echo 'set completion-ignore-case on' | sudo tee -a /etc/inputrc
-    clear
 
 
 # if not
