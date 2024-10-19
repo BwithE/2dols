@@ -13,6 +13,15 @@ if [[ $EUID -ne 0 ]]; then
 fi
 
 
+boots=$(cat << EOF
+"+-------------------------------------+"
+░█▀▄░█▀█░█▀█░▀█▀░▀█▀░█▀█░█▀█░█░░░█▀▀
+░█▀▄░█░█░█░█░░█░░░█░░█░█░█░█░█░░░▀▀█
+░▀▀░░▀▀▀░▀▀▀░░▀░░░▀░░▀▀▀░▀▀▀░▀▀▀░▀▀▀
+"+-------------------------------------+"
+EOF
+)
+echo "$boots"
 
 # check for ubuntu
 if uname -a | grep -i ubuntu; then
@@ -32,7 +41,7 @@ if uname -a | grep -i ubuntu; then
     echo 'set completion-ignore-case on' | sudo tee -a /etc/inputrc
 
 # check for raspbian
-elif uname -a | grep -i rasbi; then
+elif uname -a | grep -i raspbi; then
     echo "this is raspbian!"
     sudo apt update -y
     # install raspbian packages
@@ -64,5 +73,5 @@ else
     echo "Couldn't determine OS. EXITING...."
     exit 1
 fi
-
+echo "+-------------------------------------+"
 echo "Script completed successfully."
