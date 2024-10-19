@@ -5,8 +5,15 @@ Clone this repo:
 
 ```git clone https://github.com/bwithe/boottools```
 
-Run the script: 
+Locate the script: 
+
 `cd boottools`
 
-`sudo bash boottools.sh`
+Make `boottools.sh` executable
+
+`sudo chmod +x boottools.sh`
+
+Execute the script
+
+`sudo ./boottools.sh`
 
