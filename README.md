@@ -16,7 +16,7 @@ cd boottools
 Make `boottools.sh` executable
 
 ```
-sudo chmod +x boottools.sh
+chmod +x boottools.sh
 ```
 
 Execute the script
