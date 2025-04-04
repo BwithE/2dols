@@ -1,27 +1,33 @@
-# Quick tools to install upon first installation
-This script is a quick wget to install and configure desired tools on RASBIAN, UBUNTU, KALI or CENTOS.
+# Description
+I created this script while working through OSCP, HTB, and THM. 
 
+I've added tools that are necessary for pentesting.
+
+It's configured to to work with Rasbian, Ubuntu, and of course, Kali.
+
+
+# Usage
 Clone this repo: 
 
 ```
-git clone https://github.com/bwithe/boottools
+git clone https://github.com/bwithe/2dols
 ```
 
 Locate the script: 
 
 ```
-cd boottools
+cd 2dols
 ```
 
-Make `boottools.sh` executable
+Make `2dols.sh` executable
 
 ```
-chmod +x boottools.sh
+chmod +x 2dols.sh
 ```
 
 Execute the script
 
 ```
-sudo ./boottools.sh
+sudo ./2dols.sh
 ```
 
