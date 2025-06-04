@@ -19,7 +19,7 @@ cat << "EOF"
 EOF
 
 # Unified tool list (close to Kali)
-tool_list="aircrack-ng arp-scan bloodhound build-essential chisel curl exploitdb ftp g++-mingw-w64 gobuster gpgv2 libaprutil1 libgmp3-dev libpcap-dev libpq-dev libreadline6-dev libsqlite3-dev libssl-dev libsvn1 libtool libxml2 libxml2-dev libxslt-dev libyaml-dev libreoffice libreoffice-gtk4 ligolo-ng locate mingw-w64 ncat net-tools ncurses-dev nmap obsidian openssl postgresql postgresql-contrib python3 python3-venv qrencode rlwrap seclists shellter steghide terminator tshark tree vsftpd wget wireshark wine xsel zbar-tools zlib1g zlib1g-dev veil ettercap-text-only"
+tool_list="aircrack-ng arp-scan bloodhound build-essential chisel curl exploitdb ftp g++-mingw-w64 gobuster gpgv2 libaprutil1 libgmp3-dev libpcap-dev libpq-dev libreadline6-dev libsqlite3-dev libssl-dev libsvn1 libtool libxml2 libxml2-dev libxslt-dev libyaml-dev libreoffice libreoffice-gtk4 ligolo-ng locate mingw-w64 ncat net-tools ncurses-dev nmap obsidian openssl postgresql postgresql-contrib python3 python3-venv qrencode rlwrap seclists shellter steghide terminator tshark tree vsftpd wget wireshark wine xsel zbar-tools zlib1g zlib1g-dev veil ettercap-text-only hakrawler payloadallthethings"
 
 # Detect OS
 OS=$(uname -a | tr '[:upper:]' '[:lower:]')
