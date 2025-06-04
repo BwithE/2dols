@@ -33,6 +33,7 @@ install_packages() {
     mkdir /opt/tools
     git clone https://github.com/bwithe/lstnr /opt/lstnr
     git clone https://github.com/bwithe/uppy /opt/uppy
+    git clone https://github.com/bwithe/postshell /opt/postshell
 
 # latest linpeas.sh and winPEASx64.exe
     bash -c "wget \$(curl -s https://api.github.com/repos/peass-ng/PEASS-ng/releases/latest | grep browser_download_url | grep linpeas.sh | cut -d '\"' -f 4) -O /opt/tools/linpeas.sh"
