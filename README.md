@@ -7,18 +7,27 @@ It's configured to to work with Rasbian, Ubuntu, and of course, Kali.
 
 All tools listed:
 ```
-aircrack-ng          arp-scan              bloodhound            build-essential       chisel
-curl                 exploitdb             ftp                   g++-mingw-w64         gobuster
-gpgv2                libaprutil1           libgmp3-dev           libpcap-dev           libpq-dev
-libreadline6-dev     libsqlite3-dev        libssl-dev            libsvn1               libtool
-libxml2              libxml2-dev           libxslt-dev           libyaml-dev           libreoffice
-libreoffice-gtk4     ligolo-ng             locate                mingw-w64             ncat
-net-tools            ncurses-dev           nmap                  obsidian              openssl
-postgresql           postgresql-contrib    python3-venv          qrencode              rlwrap
-seclists             shellter              steghide              terminator            tshark
-tree                 vsftpd                wget                  wireshark             wine
-xsel                 zbar-tools            zlib1g                zlib1g-dev            veil
-ettercap-text-only
+neo4j
+gobuster
+seclists
+obsidian
+libreoffice
+libreoffice-gtk4
+terminator
+mingw-w64
+g++-mingw-w64
+python3-venv
+exploitdb
+shellter
+wine
+chisel
+ligolo-ng
+bloodhound
+rlwrap
+ncat
+veil
+hakrawler
+payloadsallthethings
 ```
 
 
